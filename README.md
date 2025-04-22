@@ -1,3 +1,14 @@
+This is a sample react application that send requests to a python app using a simple model for a chat bot, to be deployed in the mesh. 
+
+![image](https://github.com/user-attachments/assets/66c837c8-35da-4591-96ef-2f58b52295fd)
+
+Requirements: 
+- docker
+- python
+- minikube 
+
+![image](https://github.com/user-attachments/assets/cfbc76eb-1cdf-4eb3-9a50-66c8d684ac7d)
+
 For minikube, run this before build the container to have the image available:
 $(minikube docker-env)
 
