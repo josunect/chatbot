@@ -26,8 +26,8 @@ Build the frontend. From /frontend:
 
 Add to the mesh
 `kubectl label namespace chatbot istio-injection=enabled`
-`kubectl apply -f deplyment.yaml -n chatbot`
-`kubectl apply -f frontend/gw.yaml -n chatbot`
+`kubectl apply -f deployment.yaml -n chatbot`
+`kubectl apply -f gw.yaml -n chatbot`
 
 
 Run (Note that the react app is pointing to localhost:6080): 
