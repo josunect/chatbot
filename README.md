@@ -17,10 +17,15 @@ Download the model:
 wget https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf -O openchat.gguf
 ```
 
+Prepare environment: 
+```
+kubectl create ns chatbot
+kubectl label namespace chatbot istio-injection=enabled
+```
+
 Build the backend:
 ```
 docker build -t chatbot .
-kubectl create ns chatbot
 kubectl apply -f chatbot.yaml -n chatbot
 ```
 
@@ -30,7 +35,6 @@ Build the frontend. From /frontend:
 
 Add to the mesh
 ```
-kubectl label namespace chatbot istio-injection=enabled
 kubectl apply -f deployment.yaml -n chatbot
 kubectl apply -f gw.yaml -n chatbot
 ```
