@@ -18,7 +18,8 @@ wget https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/
 ```
 
 Build the backend:
-```docker build -t chatbot .
+```
+docker build -t chatbot .
 kubectl create ns chatbot
 kubectl apply -f chatbot.yaml -n chatbot
 ```
@@ -28,7 +29,8 @@ Build the frontend. From /frontend:
 `docker build -t chatbot-api .`
 
 Add to the mesh
-```kubectl label namespace chatbot istio-injection=enabled
+```
+kubectl label namespace chatbot istio-injection=enabled
 kubectl apply -f deployment.yaml -n chatbot
 kubectl apply -f gw.yaml -n chatbot
 ```
