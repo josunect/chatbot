@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: chatbot
-        image: fastapi-gpt2-chatbot
+        image: chatbot
+        imagePullPolicy: Never
         ports:
         - containerPort: 8000
 ---
