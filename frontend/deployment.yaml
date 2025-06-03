@@ -14,7 +14,7 @@ spec:
         app: react-chatbot
     spec:
       containers:
-      - name: chatbot
+      - name: chatbot-api
         image: chatbot-api
         imagePullPolicy: Never
         ports:
